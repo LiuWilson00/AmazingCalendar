@@ -1,0 +1,151 @@
+.Calendars {
+    font-family: Helvetica Neue, Helvetica, Arial, PingFang HK, \.PingFang-SC-Regular, PingFang, Hiragino Sans GB, STHeiti, Microsoft JhengHei, sans-serif;
+
+    h3 {
+        font-weight: normal
+    }
+
+    * {
+        display: flex;
+        flex-grow: 1;
+    }
+
+    .infomation {
+        margin-bottom: 1rem;
+        flex-wrap: wrap;
+        align-items: center;
+
+        div {
+            margin: 5px 0
+        }
+
+        .button-group {
+            margin-right: 2%;
+            flex-grow: 0.5;
+
+            button {
+                background-color: #fff;
+                border-color: #ebeef5;
+                color: #c0c4cc;
+                border: 1px solid #dcdfe6;
+                background-image: none;
+                transition: .2s;
+                cursor: pointer;
+            }
+
+            button:hover {
+                color: #02cab9;
+                border-color: rgba(2, 202, 185, .95);
+            }
+
+            button.is-disabled {
+
+                cursor: not-allowed;
+            }
+
+            button.is-disabled:hover {
+
+                border-color: #ebeef5;
+                color: #c0c4cc;
+            }
+
+
+
+        }
+
+        .time-zone {
+            justify-content: flex-end;
+            font-size: 12px;
+        }
+
+    }
+
+    .schedule {
+
+        .date-col {
+            margin: 0 5px;
+            border-top: 4px solid #02cab9;
+
+            .date-col-content {
+                flex-direction: column;
+                padding: 10px 0;
+                align-items: center;
+                justify-content: center;
+                display: inline-block;
+
+                .week-label {
+
+                    justify-content: center;
+                }
+
+                .date-label {
+                    margin: 10px 0;
+                    justify-content: center;
+                }
+
+                .time-label {
+                    margin: 0.5rem 0;
+                    justify-content: center;
+                    font-size: 12px
+                }
+
+                .time-label.available {
+                    color: #02cab9;
+                }
+
+                .time-label.booked {
+
+                    color: #b6b6b6;
+                }
+            }
+
+
+
+        }
+
+        .date-col.past-date {
+            border-top: 4px solid #d2d2d2;
+
+            .date-col-content {
+                color: #d2d2d2;
+
+
+            }
+        }
+    }
+
+}
+
+
+@font-face {
+    font-family: "Material Icons";
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/materialicons/v50/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format("woff2");
+}
+
+.material-icons {
+    font-family: "Material Icons";
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Support for IE. */
+    font-feature-settings: "liga";
+}

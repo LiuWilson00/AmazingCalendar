@@ -1,12 +1,20 @@
 <template>
-  <div class="home">
-    <Calendars @getNewDate="getRemoteDate" :timeInfomation="remoteDate" width="1024" />
+  <div class="Simulation">
+    <Calendars @getNewDate="getRemoteDate" :timeInfomation="remoteDate" width="640" />
+    <div class="json-editor">
+      <VJsoneditor class v-model="remoteDate" height="400px"></VJsoneditor>
+    </div>
   </div>
 </template>
 <style lang="scss" >
-.home {
-  .Calendars {
-    margin: 0 auto;
+.Simulation {
+  display: flex;
+  * {
+    flex-grow: 1;
+  }
+  .json-editor {
+    width: 500px;
+    height: 768px;
   }
 }
 </style>
@@ -18,8 +26,10 @@
 import Calendars from "@/components/Calendars/Calendars.vue";
 import TestAvailableTimes from "../TestAvailableTimes.json";
 import DateTimeTool from "../components/Calendars/DateTimeTool";
+import VJsoneditor from "v-jsoneditor/src/index";
+
 export default {
-  name: "Home",
+  name: "Simulation",
   data() {
     return {
       remoteDate: { available: [], booked: [] }
@@ -54,7 +64,8 @@ export default {
     this.init();
   },
   components: {
-    Calendars
+    Calendars,
+    VJsoneditor
   }
 };
 </script>

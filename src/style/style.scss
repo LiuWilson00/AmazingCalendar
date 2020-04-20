@@ -1,0 +1,46 @@
+#app {
+    font-family: Helvetica Neue, Helvetica, Arial, PingFang HK, \.PingFang-SC-Regular, PingFang, Hiragino Sans GB, STHeiti, Microsoft JhengHei, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+
+    #nav {
+        padding: 30px;
+        justify-content: space-between;
+        display: flex;
+        background: ghostwhite;
+
+        a {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        a.router-link-exact-active {
+            color: #42b983;
+        }
+
+        .lang-group {
+            display: flex;
+
+            button {
+                background-color: transparent;
+                border: none;
+            }
+
+            button.active {
+                color: #42b983;
+            }
+
+            button:focus {
+                background-color: transparent;
+                border: none;
+                outline: none;
+            }
+        }
+
+    }
+
+
+
+}
